@@ -8,7 +8,8 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'npm install npm@8.17.0 -E --location=global' 
+                sh 'sudo chown -R 109:118 "/.npm"'
+                sh 'npm install' 
             }
         }
     }
