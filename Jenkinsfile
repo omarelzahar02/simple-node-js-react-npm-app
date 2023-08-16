@@ -8,8 +8,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'npm cache clean --force'
-                sh 'npm install' 
+                sh 'npm install npm@8.17.0 -E --location=global' 
             }
         }
     }
